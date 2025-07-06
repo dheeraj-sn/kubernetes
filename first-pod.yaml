@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world-pod
+  labels:
+    app: hello-world
+    environment: learning
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:alpine
+    ports:
+    - containerPort: 80
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "50m"
+      limits:
+        memory: "128Mi"
+        cpu: "100m" 
